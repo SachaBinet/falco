@@ -23,21 +23,12 @@ def inject_custom_css():
             font-family: 'Segoe UI', 'Verdana', sans-serif;
             background-color: #ffffff;
         }
-
         .stTextArea textarea {
             font-size: 1.1rem;
             line-height: 1.6;
         }
-
         button {
             font-size: 1.1rem !important;
-        }
-
-        /* Adaptation mobile : moins de marges sur petits écrans */
-        @media only screen and (max-width: 768px) {
-            .block-container {
-                padding: 0rem 0.5rem 0rem 0.5rem;
-            }
         }
         </style>
     """, unsafe_allow_html=True)
@@ -56,6 +47,9 @@ Ta mission est d’en extraire les informations et de les rendre accessibles sou
 1. Gros caractères : mise en page simple, titres, phrases courtes
 2. Version FALC (Facile à Lire et à Comprendre)
 3. Version audio-friendly (phrases fluides, voix naturelle)
+
+Je veux que tu dévrives ce que représente le document (menu de restaurant, notice, étiquette alimentaire, etc.).
+S'il s'agit d'un menu de restaurant je veux la liste exhaustive de ce que tu y trouves.
 
 Rends la réponse au format JSON, sans commentaire ni balise Markdown :
 {
