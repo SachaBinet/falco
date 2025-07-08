@@ -6,7 +6,7 @@ textColor = "#222222"
 font = "sans serif"
 
 [server]
-headless = false
+headless = true
 
 [client]
 showSidebarNavigation = false
