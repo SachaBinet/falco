@@ -23,12 +23,21 @@ def inject_custom_css():
             font-family: 'Segoe UI', 'Verdana', sans-serif;
             background-color: #ffffff;
         }
+
         .stTextArea textarea {
             font-size: 1.1rem;
             line-height: 1.6;
         }
+
         button {
             font-size: 1.1rem !important;
+        }
+
+        /* Adaptation mobile : moins de marges sur petits écrans */
+        @media only screen and (max-width: 768px) {
+            .block-container {
+                padding: 0rem 0.5rem 0rem 0.5rem;
+            }
         }
         </style>
     """, unsafe_allow_html=True)
