@@ -8,6 +8,16 @@ import streamlit.components.v1 as components
 import base64
 from pathlib import Path
 import streamlit as st
+import ast
+
+def extract_json_from_response(raw_text):
+    try:
+        start = raw_text.find('{')
+        end = raw_text.rfind('}') + 1
+        json_str = raw_text[start:end]
+        return json.loads(json_str)
+    except Exception as e:
+        raise ValueError(f"Erreur lors du parsing JSON : {e}")
 
 # Encode l’image du logo localement en base64
 image_path = "assets/falco_logo.png"  # adapte ce chemin si besoin
@@ -81,11 +91,7 @@ def call_gpt4o_with_image(image_bytes):
         temperature=0.3
     )
     raw = response.choices[0].message.content
-    match = re.search(r"\{.*\}", raw, re.DOTALL)
-    if not match:
-        raise ValueError("Impossible d'extraire du JSON depuis la réponse IA.")
-    json_clean = match.group(0)
-    return json.loads(json_clean)
+    return extract_json_from_response(raw)
 
 # --- Bouton vocal ---
 def speak_js_block(text, label):
