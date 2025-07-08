@@ -59,7 +59,7 @@ Ta mission est d’en extraire les informations et de les rendre accessibles sou
 3. Version audio-friendly (phrases fluides, voix naturelle)
 
 Je veux que tu dévrives ce que représente le document (menu de restaurant, notice, étiquette alimentaire, etc.).
-S'il s'agit d'un menu de restaurant je veux la liste exhaustive de ce que tu y trouves.
+S'il s'agit d'un menu de restaurant je veux la liste de TOUT ce que tu y trouves avec les prix associés.
 
 Rends la réponse au format JSON, sans commentaire ni balise Markdown :
 {
