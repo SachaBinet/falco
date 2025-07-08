@@ -67,6 +67,8 @@ Rends la réponse au format JSON, sans commentaire ni balise Markdown :
   "falc": "...",
   "audio": "..."
 }
+
+Ne réponds qu’avec un objet JSON. N'ajoute AUCUNE phrase ou explication.
 """
 
 # --- Appel GPT-4o avec image ---
